@@ -2522,7 +2522,9 @@
 			}
 
 /* Button */
-
+	input[type = "submit"]{
+		align-content: center;
+	}
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
