@@ -271,22 +271,26 @@
 
 			$menu._show = function() {
 
-				if ($menu._lock())
+				if ($menu._lock()){
 					$body.addClass('is-menu-visible');
+				}
+
 
 			};
 
 			$menu._hide = function() {
 
-				if ($menu._lock())
+				if ($menu._lock()){
 					$body.removeClass('is-menu-visible');
+				}
 
 			};
 
 			$menu._toggle = function() {
 
-				if ($menu._lock())
+				if ($menu._lock()){
 					$body.toggleClass('is-menu-visible');
+				}
 
 			};
 
@@ -344,6 +348,110 @@
 					// Hide on escape.
 						if (event.keyCode == 27)
 							$menu._hide();
+
+				});
+				// Login.
+			var $login = $('#login'),
+				$loginInner;
+
+			$login.wrapInner('<div class="inner"></div>');
+			$loginInner = $login.children('.inner');
+			$login._locked = false;
+
+			$login._lock = function() {
+
+				if ($login._locked)
+					return false;
+
+				$login._locked = true;
+
+				window.setTimeout(function() {
+					$login._locked = false;
+				}, 350);
+
+				return true;
+
+			};
+
+			$login._show = function() {
+
+				if ($login._lock()){
+					$body.addClass('is-login-visible');
+				}
+
+
+			};
+
+			$login._hide = function() {
+
+				if ($login._lock()){
+					$body.removeClass('is-login-visible');
+				}
+
+			};
+
+			$login._toggle = function() {
+
+				if ($login._lock()){
+					$body.toggleClass('is-login-visible');
+				}
+
+			};
+
+			$loginInner
+				.on('click', function(event) {
+					event.stopPropagation();
+				})
+				.on('click', 'a', function(event) {
+
+					var href = $(this).attr('href');
+
+					event.preventDefault();
+					event.stopPropagation();
+
+					// Hide.
+						$login._hide();
+
+					// Redirect.
+						window.setTimeout(function() {
+							window.location.href = href;
+						}, 250);
+
+				});
+
+			$login
+				.appendTo($body)
+				.on('click', function(event) {
+
+					event.stopPropagation();
+					event.preventDefault();
+
+					$body.removeClass('is-login-visible');
+
+				})
+				.append('<a class="close" href="#login">Close</a>');
+
+			$body
+				.on('click', 'a[href="#login"]', function(event) {
+
+					event.stopPropagation();
+					event.preventDefault();
+
+					// Toggle.
+						$login._toggle();
+
+				})
+				.on('click', function(event) {
+
+					// Hide.
+						$login._hide();
+
+				})
+				.on('keydown', function(event) {
+
+					// Hide on escape.
+						if (event.keyCode == 27)
+							$login._hide();
 
 				});
 
