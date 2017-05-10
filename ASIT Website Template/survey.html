@@ -15,8 +15,13 @@
 <body>
 	<div id = wrapper>
 		<header id="header" class="alt style2">
+
 			<a href="index.html" class="logo"><strong>ASIT</strong> <span>by AMSA</span></a>
 			<nav>
+
+				<a href = "signup.html">Sign Up</a>
+				<a href="#login">Log In</a>
+
 				<a href="#menu">Menu</a>
 			</nav>
 		</header>
@@ -24,27 +29,32 @@
 		<nav id="menu">
 			<ul class="links">
 				<li><a href="index.html">Home</a></li>
-				<li><a href="landing.html">Landing</a></li>
-				<li><a href="generic.html">Generic</a></li>
-				<li><a href="elements.html">Elements</a></li>
+				<li><a href="info.html">View Info</a></li>
+
+				
 			</ul>
 			<ul class="actions vertical">
-				<li><a href="#" class="button special fit">Get Started</a></li>
-				<li><a href="#" class="button fit">Log In</a></li>
+				<li></li>
 			</ul>
 		</nav>
-		<!--<nav id="login">
+		<nav id="login">
+			<table>
+			<tr>
+
+				<td>Username</td>
+				<td><input type = "text"/></td>
+
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type = "password"/></td>
+			</tr>
+			</table>
+			<center><input type = "submit" class="button fit" value = "Log in"/></center>
 			
-			<ul class = "actions vertical">
-				<li>Username<input type = "text"></li>
-				<li>Password<input type = "text"></li>
-	
-			</ul>
-			<ul class="actions vertical">
-				<li><a href="#" class="button fit" height = "20px">Login</a></li>
-			</ul>
 			
-		</nav>-->
+			
+		</nav>
 		<section id="banner" class="style2">
 			<div class="inner">
 				<span class="image">
@@ -82,7 +92,41 @@
 						&nbsp;Logical/Mathematic<input type = "checkbox" value = "Logical/Mathematic" name ="learning style"/><br/>
 					</td>
 				</tr>
+				<tr>
+					<td>What are your strengths?</td>
+					<td>
+					&nbsp;Time Management<input type = "checkbox" value = "Time Management" name ="strengths"/><br/>
+					&nbsp;Organization<input type = "checkbox" value = "Organization" name ="strengths"/><br/>
+					&nbsp;Motivation<input type = "checkbox" value = "Motivation" name ="strengths"/><br/>
+					&nbsp;Communication<input type = "checkbox" value = "Communication" name ="strengths"/><br/>
+					&nbsp;Participation<input type = "checkbox" value = "Participation" name ="strengths"/><br/>
+					&nbsp;Teamwork<input type = "checkbox" value = "Teamwork" name ="strengths"/><br/>
+					&nbsp;Dedication<input type = "checkbox" value = "Dedication" name ="strengths"/><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>What are your weaknesses?</td>
+					<td>
+					&nbsp;Time Management<input type = "checkbox" value = "Time Management" name ="weaknesses"/><br/>
+					&nbsp;Organization<input type = "checkbox" value = "Organization" name ="weaknesses"/><br/>
+					&nbsp;Motivation<input type = "checkbox" value = "Motivation" name ="weaknesses"/><br/>
+					&nbsp;Communication<input type = "checkbox" value = "Communication" name ="weaknesses"/><br/>
+					&nbsp;Participation<input type = "checkbox" value = "Participation" name ="weaknesses"/><br/>
+					&nbsp;Teamwork<input type = "checkbox" value = "Teamwork" name ="weaknesses"/><br/>
+					&nbsp;Dedication<input type = "checkbox" value = "Dedication" name ="weaknesses"/><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>What are your personal hobbies?</td>
+					<td><input type = "text" name ="hobbies"/></td>
+				</tr>
+				<tr>
+					<td>What are your career interests?</td>
+					<td><input type = "text" name ="career interests"/></td>
+				</tr>
+
 				</table>
+				<center><input type = "Submit" name ="Submit"/></center>
 			</form>
 		
 		</section>
