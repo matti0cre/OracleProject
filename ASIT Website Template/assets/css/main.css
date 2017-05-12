@@ -3887,7 +3887,17 @@
 				#menu ul.links > li {
 					padding: 0;
 				}
-
+					#menu ul.links > li > textarea {
+						border: 0;
+						border-top: solid 1px rgba(212, 212, 255, 0.1);
+						display: block;
+						font-size: 0.8em;
+						font-weight: 600;
+						letter-spacing: 0.25em;
+						line-height: 4em;
+						text-decoration: none;
+						text-transform: uppercase;
+					}
 					#menu ul.links > li > a:not(.button) {
 						border: 0;
 						border-top: solid 1px rgba(212, 212, 255, 0.1);
@@ -3993,7 +4003,7 @@
 /* Login */
 
 	#login{
-		font-family: "Courier New", monospace;		
+				
 		-moz-transition: -moz-transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
 		-webkit-transition: -webkit-transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
 		-ms-transition: -ms-transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
@@ -4044,7 +4054,7 @@
 			overflow: auto;
 			text-align: center;
 			visibility: hidden;
-			width: 18em;
+			width: 75%;
 		}
 
 			#login .inner > :first-child {
@@ -4055,6 +4065,29 @@
 				margin-bottom: 3em;
 			}
 
+		#login table{
+			border:solid 0px rgba(212, 212, 255, 0.1);
+			width: 100%;
+			border-bottom: 0;
+			font-size: 1em;
+			font-weight: 600;
+			letter-spacing: 0.25em;
+			line-height: 4em;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+			#login table tbody tr{
+				text-align:left;
+				border:none;
+				background-color: rgba(36, 41, 67, 0.9);
+
+			}
+
+		#login input[type="submit"],
+		#login a{
+			width:50%;
+		}
 		#login ul {
 			margin: 0 0 1em 0;
 		}
@@ -4142,7 +4175,6 @@
 			}
 			#login ul{
 				font-size: 2em;
-				font-family: "FontAwesome", monospace;		
 
 			}
 
